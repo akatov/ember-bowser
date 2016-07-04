@@ -43,6 +43,7 @@
     "ember-addon"
   ],
   "dependencies": {
+    "bowser": "^1.4.0",
     "ember-cli-babel": "^5.1.6"
   },
   "ember-addon": {
