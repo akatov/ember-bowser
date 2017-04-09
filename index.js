@@ -1,4 +1,4 @@
-/* jshint node: true */
+/* eslint-env node */
 'use strict';
 
 var Funnel = require('broccoli-funnel');
@@ -24,11 +24,10 @@ module.exports = {
     if (vendorTree) {
       trees.push(vendorTree);
     }
-    var nodeModules = path.join(__dirname, 'node_modules');
     var bowserPath = path.dirname(require.resolve('bowser'));
     trees.push(new Funnel(bowserPath, {
       destDir: 'bowser',
-      include: ['bowser.js'],
+      include: ['bowser.js']
     }));
     return mergeTrees(trees);
   }
